@@ -1,5 +1,5 @@
 # interestincpc
-Script em R (em desenvolvimento) para acessar o site do Comitê de Pronunciamentos Contábeis e automatizar o download dos pronunciamentos, orientações e interpretações.
+Script em R (em desenvolvimento) para acessar o site do Comitê de Pronunciamentos Contábeis (http://www.cpc.org.br/CPC) e automatizar o download dos pronunciamentos, orientações e interpretações.
 
 - Download dos pronunciamentos (versão inicial)
 - Download das orientações (pendente)
