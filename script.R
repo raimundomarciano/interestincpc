@@ -18,6 +18,7 @@ pronunciamentos_n1 <- function(niv0, ativo = "sim"){
   n1 <- niv0
   linhas <- nrow(n1)
   lista1 <- data.frame()
+  library(rvest)
   
   for (linha in 1:linhas){
     a <- read_html(n1[linha,2])
@@ -25,6 +26,7 @@ pronunciamentos_n1 <- function(niv0, ativo = "sim"){
     a2 <- a %>% html_nodes("a") %>% html_attr("href")
     pronunciamentos_1 <- data.frame(a1,a2)
     pronunciamentos_1$a1 <- trimws(pronunciamentos_1$a1, which = c("left"))
+    pronunciamentos_1$a1 <- trimws(pronunciamentos_1$a1, which = c("right"))
     pronunciamentos_1$a1 <- gsub("[\r\n]", "", pronunciamentos_1$a1)
     pronunciamentos_1 <- pronunciamentos_1[pronunciamentos_1$a1 == 'Pronunciamento',]
     
@@ -42,7 +44,7 @@ pronunciamentos_n1 <- function(niv0, ativo = "sim"){
   lista1
 }
 
-lista_01a <- pronunciamentos_n1(niv0, ativo = "não")
+lista_01a <- pronunciamentos_n1(niv0, ativo = "sim")
 
 
 download_pronunciamentos <- function(links){
