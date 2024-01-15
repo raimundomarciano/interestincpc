@@ -44,7 +44,7 @@ pronunciamentos_n1 <- function(niv0, ativo = "sim"){
   lista1
 }
 
-lista_01a <- pronunciamentos_n1(niv0, ativo = "sim")
+lista_01a <- pronunciamentos_n1(niv0, ativo = "não")
 
 
 download_pronunciamentos <- function(links){
